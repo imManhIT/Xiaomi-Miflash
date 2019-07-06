@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{BC6B704F-313E-4FBF-809E-21D141FBD0D3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XiaoMiFlash</RootNamespace>
+    <AssemblyName>XiaoMiFlash</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>XiaoMiFlash.ico</ApplicationIcon>
+    <StartupObject>XiaoMiFlash.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MiUSB">
+      <HintPath>C:\Users\Admin\Desktop\XiaoMiFlash_OLD\XiaoMiFlash\MiUSB.dll</HintPath>
+    </Reference>
+    <Reference Include="PUB_TEST_FUNC_DLL">
+      <HintPath>C:\Users\Admin\Desktop\XiaoMiFlash_OLD\XiaoMiFlash\PUB_TEST_FUNC_DLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="code\authFlash\EDL_SLA_Challenge.cs" />
+    <Compile Include="code\authFlash\PInvokeResultArg.cs" />
+    <Compile Include="code\bl\CRC.cs" />
+    <Compile Include="code\bl\DeviceCtrl.cs" />
+    <Compile Include="code\bl\DeviceInspector.cs" />
+    <Compile Include="code\bl\FactoryCtrl.cs" />
+    <Compile Include="code\bl\FileTransfer.cs" />
+    <Compile Include="code\bl\FileTransferSharer.cs" />
+    <Compile Include="code\bl\ImageValidation.cs" />
+    <Compile Include="code\bl\MiDriver.cs" />
+    <Compile Include="code\bl\MTKDevice.cs" />
+    <Compile Include="code\bl\ScriptDevice.cs" />
+    <Compile Include="code\bl\SerialPortDevice.cs" />
+    <Compile Include="code\data\FlashingDevice.cs" />
+    <Compile Include="code\data\MemImg.cs" />
+    <Compile Include="code\data\MiFlashGlobal.cs" />
+    <Compile Include="code\lan\ILanguageSupport.cs" />
+    <Compile Include="code\lan\LanguageProvider.cs" />
+    <Compile Include="code\lan\LanguageType.cs" />
+    <Compile Include="code\MiControl\ComboBoxStripItem.cs" />
+    <Compile Include="code\MiControl\RadioStripItem.cs" />
+    <Compile Include="code\module\CheckCPUIDResult.cs" />
+    <Compile Include="code\module\CommandPacket.cs" />
+    <Compile Include="code\module\Device.cs" />
+    <Compile Include="code\module\Firehose.cs" />
+    <Compile Include="code\module\FlashResult.cs" />
+    <Compile Include="code\module\FlashType.cs" />
+    <Compile Include="code\module\HelloCommand.cs" />
+    <Compile Include="code\module\HelloResponse.cs" />
+    <Compile Include="code\module\MiProperty.cs" />
+    <Compile Include="code\module\MiUserInfo.cs" />
+    <Compile Include="code\module\OpenMultiImageCommand.cs" />
+    <Compile Include="code\module\OpenMultiImageResponse.cs" />
+    <Compile Include="code\module\Programmer.cs" />
+    <Compile Include="code\module\ReadPacketResponse.cs" />
+    <Compile Include="code\module\Sahara.cs" />
+    <Compile Include="code\module\sahara_64b_readdata_packet.cs" />
+    <Compile Include="code\module\sahara_done_response.cs" />
+    <Compile Include="code\module\sahara_end_transfer_packet.cs" />
+    <Compile Include="code\module\sahara_hello_packet.cs" />
+    <Compile Include="code\module\sahara_hello_response.cs" />
+    <Compile Include="code\module\sahara_packet.cs" />
+    <Compile Include="code\module\sahara_readdata_packet.cs" />
+    <Compile Include="code\module\sahara_switch_Mode_packet.cs" />
+    <Compile Include="code\module\Script.cs" />
+    <Compile Include="code\module\SecurityModeCommand.cs" />
+    <Compile Include="code\module\SimpleCommand.cs" />
+    <Compile Include="code\module\SimpleResponse.cs" />
+    <Compile Include="code\module\SoftwareImage.cs" />
+    <Compile Include="code\module\Sparse.cs" />
+    <Compile Include="code\module\SparseChunkHeader.cs" />
+    <Compile Include="code\module\SparseImageHeader.cs" />
+    <Compile Include="code\module\Storage.cs" />
+    <Compile Include="code\module\StreamingArg.cs" />
+    <Compile Include="code\module\StreamWriteCommand.cs" />
+    <Compile Include="code\module\StreamWriteResponse.cs" />
+    <Compile Include="code\module\UserInfo.cs" />
+    <Compile Include="code\Utility\Cmd.cs" />
+    <Compile Include="code\Utility\Comm.cs" />
+    <Compile Include="code\Utility\CommandFormat.cs" />
+    <Compile Include="code\Utility\ComPortCtrl.cs" />
+    <Compile Include="code\Utility\DeviceClasses.cs" />
+    <Compile Include="code\Utility\DeviceInfo.cs" />
+    <Compile Include="code\Utility\Driver.cs" />
+    <Compile Include="code\Utility\FileReader.cs" />
+    <Compile Include="code\Utility\FileSearcher.cs" />
+    <Compile Include="code\Utility\IniFile.cs" />
+    <Compile Include="code\Utility\Log.cs" />
+    <Compile Include="code\Utility\MiAppConfig.cs" />
+    <Compile Include="code\Utility\MiProcess.cs" />
+    <Compile Include="code\Utility\OemCopyStyle.cs" />
+    <Compile Include="code\Utility\OemSourceMediaType.cs" />
+    <Compile Include="code\Utility\SetupUOInfFlags.cs" />
+    <Compile Include="code\Utility\ShareMemory.cs" />
+    <Compile Include="code\Utility\TreeViewUsbItem.cs" />
+    <Compile Include="code\Utility\UsbDevice.cs" />
+    <Compile Include="code\Utility\Utility.cs" />
+    <Compile Include="form\ComPortConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ComPortConfig.Designer.cs">
+      <DependentUpon>ComPortConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ConfigurationFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ConfigurationFrm.Designer.cs">
+      <DependentUpon>ConfigurationFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\DriverFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\DriverFrm.Designer.cs">
+      <DependentUpon>DriverFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ProcessFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ProcessFrm.Designer.cs">
+      <DependentUpon>ProcessFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ValidationFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ValidationFrm.Designer.cs">
+      <DependentUpon>ValidationFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrm.Designer.cs">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MiBaseFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MiBaseFrm.Designer.cs">
+      <DependentUpon>MiBaseFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MiInstaller.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SocketChatClient.cs" />
+    <Compile Include="Test.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="form\ComPortConfig.resx">
+      <DependentUpon>ComPortConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ConfigurationFrm.resx">
+      <DependentUpon>ConfigurationFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\DriverFrm.resx">
+      <DependentUpon>DriverFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ProcessFrm.resx">
+      <DependentUpon>ProcessFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ValidationFrm.resx">
+      <DependentUpon>ValidationFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrm.resx">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
